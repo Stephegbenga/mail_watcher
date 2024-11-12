@@ -20,7 +20,7 @@ def send_html(receiver_email):
     # Set up the MIME
     message = MIMEMultipart("alternative")
     message["Subject"] = subject
-    message["From"] = sender_email
+    message['From'] = f"Worldvision <{sender_email}>"
     message["To"] = receiver_email
 
     # Attach the HTML content
